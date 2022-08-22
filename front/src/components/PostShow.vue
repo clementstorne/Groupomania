@@ -245,7 +245,7 @@ export default {
       };
       try {
         if (this.liked) {
-          await LikesService.deleteLike(credentials);
+          await LikesService.deleteLike(credentials.PostId);
           this.numberOfLikes--;
           this.liked = false;
         } else {
@@ -267,7 +267,7 @@ export default {
       };
       try {
         if (this.disliked) {
-          await DislikesService.deleteDislike(credentials);
+          await DislikesService.deleteDislike(credentials.PostId);
           this.numberOfDislikes--;
           this.disliked = false;
         } else {

@@ -8,12 +8,12 @@ let addDislike = (credentials) => {
   return Axios.post("/dislikes/", credentials);
 };
 
-let deleteDislike = (credentials) => {
-  return Axios.delete("/dislikes/", credentials);
+let deleteDislike = (postId) => {
+  return Axios.delete(`/dislikes/${postId}`);
 };
 
-let getAllDislikes = (PostId) => {
-  return Axios.get(`/dislikes/${PostId}`);
+let getAllDislikes = (postId) => {
+  return Axios.get(`/dislikes/${postId}`);
 };
 
 export const DislikesService = {

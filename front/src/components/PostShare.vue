@@ -39,12 +39,14 @@
           <input
             type="file"
             name="image"
-            id=""
+            id="media"
             accept="image/png, image/jpg, image/jpeg"
             class="posting-bottom-picture-btn-input"
             @change="setBase64urlImage"
           />
-          <button class="btn btn-secondary mx-1">📷 Partager une photo</button>
+          <button class="btn btn-secondary mx-1">
+            <label for="media">📷 Partager une photo</label>
+          </button>
         </div>
         <div class="posting-bottom-btn col-12 col-md-6 d-grid mb-2 p-0">
           <button class="btn btn-primary mx-1" @click.prevent="createNewPost">
@@ -97,8 +99,10 @@ export default {
         }
         formData.append("content", this.post.content);
         const result = await PostsService.createPost(formData);
-        // this.$router.go();
         this.$emit("newPostPublished", result.data.data);
+        this.post.content = null;
+        this.imageFile = null;
+        this.imageBase64url = null;
       } catch (err) {
         console.log(err);
       }
@@ -185,7 +189,7 @@ export default {
   border-radius: 8px;
   border: none;
   &-primary {
-    background: $color-primary;
+    background: $color-primary !important;
     &:hover {
       background: darken($color-primary, 5%);
     }
@@ -195,7 +199,7 @@ export default {
     }
   }
   &-secondary {
-    background: $color-tertiary;
+    background: $color-tertiary !important;
     &:hover {
       background: darken($color-tertiary, 5%);
     }

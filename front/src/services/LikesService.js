@@ -8,12 +8,12 @@ let addLike = (credentials) => {
   return Axios.post("/likes/", credentials);
 };
 
-let deleteLike = (credentials) => {
-  return Axios.delete("/likes/", credentials);
+let deleteLike = (postId) => {
+  return Axios.delete(`/likes/${postId}`);
 };
 
-let getAllLikes = (PostId) => {
-  return Axios.get(`/likes/${PostId}`);
+let getAllLikes = (postId) => {
+  return Axios.get(`/likes/${postId}`);
 };
 
 export const LikesService = {

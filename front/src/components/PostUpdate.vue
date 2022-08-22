@@ -28,16 +28,16 @@
           <input
             type="file"
             name="image"
-            id=""
+            id="media"
             accept="image/png, image/jpg, image/jpeg"
             class="post-update-buttons-picture-btn-input"
             @change="setBase64urlImage"
           />
           <button class="btn btn-secondary mx-1" v-if="this.post.mediaUrl">
-            📷 Modifier la photo
+            <label for="media">📷 Modifier la photo</label>
           </button>
           <button class="btn btn-secondary mx-1" v-else>
-            📷 Ajouter une photo
+            <label for="media">📷 Ajouter une photo</label>
           </button>
         </div>
         <div class="post-update-buttons-btn col-12 col-md-6 d-grid mb-2 p-0">

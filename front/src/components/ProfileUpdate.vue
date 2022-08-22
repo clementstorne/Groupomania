@@ -21,17 +21,17 @@
         alt="Photo de profil de l'utilisateur"
         v-else
       />
-      <div class="profile-picture-btn col-10">
+      <div class="profile-picture-btn col-10 text-center">
         <input
           type="file"
           name="image"
-          id=""
+          id="profilePicture"
           accept="image/png, image/jpg, image/jpeg"
           class="profile-picture-btn-input"
           @change="setBase64urlImage"
         />
         <button class="btn btn-primary col-12 mt-3">
-          Modifier la photo de profil
+          <label for="profilePicture">Modifier la photo de profil</label>
         </button>
       </div>
     </div>
