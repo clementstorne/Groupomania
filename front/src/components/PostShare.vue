@@ -40,7 +40,7 @@
             type="file"
             name="image"
             id="media"
-            accept="image/png, image/jpg, image/jpeg"
+            accept="image/png, image/jpg, image/jpeg, image/gif"
             class="posting-bottom-picture-btn-input"
             @change="setBase64urlImage"
           />

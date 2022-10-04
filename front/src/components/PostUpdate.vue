@@ -29,7 +29,7 @@
             type="file"
             name="image"
             id="media"
-            accept="image/png, image/jpg, image/jpeg"
+            accept="image/png, image/jpg, image/jpeg, image/gif"
             class="post-update-buttons-picture-btn-input"
             @change="setBase64urlImage"
           />

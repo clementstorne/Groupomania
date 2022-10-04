@@ -1,71 +1,69 @@
-# Projet n°7 - Créez un réseau social d’entreprise
+# Groupomania
 
-## Technologies utilisées
+Projet n°7 du [parcours Développeur Web](https://openclassrooms.com/fr/paths/556-developpeur-web#path-tabs) d'OpenClassrooms : _Créez un réseau social d’entreprise_.
 
-- Front
+> Il s'agit de créer intégralement un réseau social d'entreprise dans lequel les membres pourront échanger des images ou des textes. Une fonction de like/dislike a également été implémentée.
+
+## 🔧 Prérequis
+
+Afin de pouvoir exécuter l'application sur votre poste, vous devez d'aborder installer les dépendances suivantes :
+
+- NodeJS
+- `npm`
+- MySQL
+
+Pour les installer, sélectionner la version correspondant à votre système d'exploitation sur [cette page](https://nodejs.org/fr/download/) puis suivez les étapes d'installation.
+
+## 📚 Technologie utilisées
+
+- Frontend
   - VueJS
   - Bootstrap
   - Axios
-- Back
+- Backend
   - NodeJS
   - Express
   - MySQL
   - Sequelize
 
-## Installation
+## 📦 Installation des packages
 
-### Prérequis
+Dans le dossier **backend**, avec le terminal, exécutez la commande `npm install` pour installer les packages requis pour le fonctionnement de l'API.
+Dans le dossier **frontend**, avec le terminal, exécutez la commande `npm install` pour installer les packages requis pour le fonctionnement du front.
 
-Pour lancer le projet, vous devez avoir les programmes suivants installés sur votre machine :
+## 🔐 Variables d'environnement
 
-- NodeJS
-- MySQL
-
-### Installation et démarrage de l'API
-
-À la racine du dossier **back**, créez un fichier **.env** avec les éléments suivants :
+Dans le dossier **backend**, créez le fichier **.env**.
+Dans ce fichier, déclarez les variables suivantes :
 
 ```
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=groupomania
-DB_USER= (identifiant de connexion à MySQL sur votre machine)
-DB_PASSWORD= (mot de passe de connexion à MySQL sur votre machine)
+DB_USER=
+DB_PASSWORD=
 
-JWT_SECRET= (chaîne de caracatère aléatoires utilisée pour la création de token de session utilisateur)
+JWT_SECRET=
 JWT_DURING=24 hour
 ```
 
-Dans le dossier **back**, avec le terminal, exécutez la commande suivante pour installer les packages requis pour le fonctionnement du backend :
+`DB_USER` et `DB_PASSWORD` sont les identifiants de connexion à MySQL sur votre machine.
+`JWT_SECRET` est une clé de sécurité utilisée pour la création de token de session utilisateur
 
-```
-npm install
-```
+## ⚙️ Exécution
 
-Enfin, exécutez la commande suivante pour démarrer l'API :
-
-```
-npm run dev
-```
-
+Pour démarrer le serveur, dans le dossier **backend**, avec le terminal, exécutez la commande `npm run dev`.
 Si tout se passe bien, le message suivant devrait s'afficher dans le terminal :
 
 ```
 Server is running on port 3000.
 ```
 
-### Installation de l'application Frontend
+Pour démarrer le serveur d'affichage du frontend, dans le dossier **frontend**, avec le terminal, exécutez la commande `npm run serve`.
+Par défaut, l'application est accessible en local via le port 8080 à l'adresse [http://localhost:8080/](http://localhost:8080/).
 
-Dans le dossier **front**, avec le terminal, exécutez la commande suivante pour installer les packages requis pour le fonctionnement du frontend de l'application :
+## 📎 Rendu visuel
 
-```
-npm install
-```
-
-Ensuite, exécutez la commande suivante pour démarrer l'application :
-
-```
-npm run serve
-```
-
-Par défaut, l'application est accessible en local via le port 8080 à l'adresse http://localhost:8080/
+![La page d'inscription](./signup.png)
+![Le feed](./feed.png)
+![La page de modification du profil](./profil.png)
